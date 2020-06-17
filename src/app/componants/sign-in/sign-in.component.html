@@ -1,0 +1,21 @@
+<section id="signin">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-6 form">
+                <form [formGroup]="signinForm" (ngSubmit)="signinForm.valid&&onSubmit()">
+                    <input [class.is-valid]='signinForm.get("email").status=="VALID"' class="form-control mb-3" formControlName="email" type="email" placeholder="Email">
+                    <div *ngIf="signinForm.get('email').invalid&&signinForm.get('email').touched"  class="mt-2 alert alert-danger">
+                        Required Email
+                    </div>                   
+                    <input [class.is-valid]='signinForm.get("password").status=="VALID"' class="form-control mb-3" formControlName="password" type="password" placeholder="Password">
+                    <div *ngIf="signinForm.get('password').invalid&&signinForm.get('password').touched"  class="mt-2 alert alert-danger">
+                      <span>*requird</span> 	
+                      Password matching expression. Password must be at least 4 characters, no more than 8 characters, 
+                      and must include at least one upper case letter, one lower case letter, and one numeric digit
+                    </div>                    
+                    <button type="submit"  [disabled]="!signinForm.valid" class="btn btn-info text-center w-100">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

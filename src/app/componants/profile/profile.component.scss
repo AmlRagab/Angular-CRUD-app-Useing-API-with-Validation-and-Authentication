@@ -1,0 +1,17 @@
+#profile
+{
+    min-height: 100vh;
+    background-color: #666;
+}
+i{
+    color: #343a40;
+    cursor: pointer;
+}
+.note{
+    background-color: #fcc;
+    min-height: 250px;
+    width: 250px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+}

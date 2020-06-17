@@ -1,0 +1,149 @@
+<section id="profile" class="pt-5">
+    <div class="container pt-5 ">
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-info float-right mb-4" data-toggle="modal" data-target="#add-note">Add
+                    Note</button>
+            </div>
+            <div class="col-md-3">
+                <div class="note text-center ">
+                    <div class="row p-3">
+                        <div class="col-md-12">
+                            <i class="fas fa-ellipsis-v m-3 float-right"  id="dropdownMenuButton" data-toggle="dropdown" 
+                            aria-haspopup="true" aria-expanded="false"></i>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" data-toggle="modal" data-target="#edit-note" href="#">Edit <i class="fa fa-trash-alt text-danger float-right"></i> </a>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#delete-note" href="#">Delete <i class="fas fa-edit text-danger float-right"></i></a>
+                                
+                              </div>
+                        </div>
+
+                        <div class="col-md-12 note-body">
+                            <h1 class="my-1">my Note
+                            </h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, maiores!</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------- Add Note------------------------------------------- -->
+    <div class="modal fade" id="add-note" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input class="form-control" placeholder="Note Title">
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="form-control mt-2" placeholder="Type Your Note" col='30'
+                            
+                                rows="10">
+                               </textarea>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info">ADD</button>
+
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------- /Add Note------------------------------------------- -->
+
+    <!------------------------------------------edit note-------------------------------------------->
+    <div class="modal fade" id="edit-note" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Your Note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input class="form-control" placeholder="Note Title">
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="form-control mt-2" placeholder="Type Your Note" col='30'
+                            
+                                rows="10">
+                               </textarea>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info">Edit</button>
+
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!------------------------------------------/edit note-------------------------------------------->
+
+     <!------------------------------------------delet note-------------------------------------------->
+     <div class="modal fade" id="delete-note" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Are you Sure ?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="container">
+                       <p class="text-info">Do You want to delete? <br>
+                            process cannot be undone</p>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Delet</button>
+
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------delet note-------------------------------------------->
+
+</section>

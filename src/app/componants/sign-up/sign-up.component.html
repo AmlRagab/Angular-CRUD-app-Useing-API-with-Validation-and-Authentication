@@ -1,0 +1,45 @@
+<section id="signup">
+    <div class="container">
+    <div class="row ">
+        <div class="col-md-6 form">
+            <form [formGroup]="profileForm" (ngSubmit)="profileForm.valid&&onSubmit()">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <input [class.is-valid]='profileForm.get("first_name").status=="VALID"' class="form-control" formControlName="first_name" type="text" placeholder="First Name">
+                        <div *ngIf="profileForm.get('first_name').invalid&&profileForm.get('first_name').touched"  class="mt-2 alert alert-danger">
+                            <span>*requird</span>  should be more than 3 letters and less than 8 letters
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">                      
+                          <input [class.is-valid]='profileForm.get("last_name").status=="VALID"' class="form-control" formControlName="last_name" type="text" placeholder="last Name">
+                          <div *ngIf="profileForm.get('last_name').invalid&&profileForm.get('last_name').touched"  class="mt-2 alert alert-danger">
+                            <span>*requird</span>  should be more than 3 letters and less than 8 letters
+                        </div>
+                    </div>
+
+                </div>
+                <input [class.is-valid]='profileForm.get("email").status=="VALID"' class="form-control mb-3" formControlName="email" type="email" placeholder="Email">
+                <div *ngIf="profileForm.get('email').invalid&&profileForm.get('email').touched"  class="mt-2 alert alert-danger">
+                    Required Email
+                </div>
+                <input [class.is-valid]='profileForm.get("age").status=="VALID"' class="form-control mb-3" formControlName="age" type="number" placeholder="Age">
+                <div *ngIf="profileForm.get('age').invalid&&profileForm.get('age').touched"  class="mt-2 alert alert-danger">
+                    Required
+                </div>
+                <input [class.is-valid]='profileForm.get("password").status=="VALID"' class="form-control mb-3" formControlName="password" type="password" placeholder="Password">
+                <div *ngIf="profileForm.get('password').invalid&&profileForm.get('password').touched"  class="mt-2 alert alert-danger">
+                  <span>*requird</span> 	
+                  Password matching expression. Password must be at least 4 characters, no more than 8 characters, 
+                  and must include at least one upper case letter, one lower case letter, and one numeric digit
+                </div>
+                <button type="submit"  [disabled]="!profileForm.valid" class="btn btn-info text-center w-100"><span *ngIf="isClicked==false">Sign Up</span>
+                    <span *ngIf="isClicked==true">Waiting...</span></button>
+                    <div *ngIf="isSuccess" class="alert alert-info mt-2 text-center" role="alert">Sucess</div>
+                    <div *ngIf="danger" class="alert alert-danger mt-2 text-center" role="alert">Account already Exist</div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
